@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "build": "tsc && cp ./midnight.module.css ./dist && cp ./lace.svg ./dist"
+    "build": "tsc && cp ./src/midnight.module.css ./dist && cp ./src/lace.svg ./dist"
   },
   "keywords": [
     "React",
