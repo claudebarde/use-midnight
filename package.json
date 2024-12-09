@@ -1,0 +1,36 @@
+{
+  "name": "use-midnight",
+  "version": "0.1.0",
+  "description": "A React hook to use Midnight in the browser",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "scripts": {
+    "build": "tsc && cp ./midnight.module.css ./dist && cp ./lace.svg ./dist"
+  },
+  "keywords": [
+    "React",
+    "hook",
+    "Midnight",
+    "TypeScript"
+  ],
+  "author": "Claude Barde",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "^19.0.1",
+    "@types/react-dom": "^19.0.1",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "@midnight-ntwrk/dapp-connector-api": "^1.2.1",
+    "react": "^18.2.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/global.d.ts",
+      "default": "./dist/index.js"
+    }
+  }
+}

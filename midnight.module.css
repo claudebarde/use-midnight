@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+button.midnight {
+  font-family: "Outfit", serif;
+  font-optical-sizing: auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  border: solid 2px #cccccc;
+  cursor: pointer;
+  background-color: #e6e6e6;
+  color: #1a1a1a;
+  transition: 0.3s;
+  outline: none;
+}
+
+button.midnight:hover {
+  background-color: #cccccc;
+  border: solid 2px #b3b3b3;
+}
