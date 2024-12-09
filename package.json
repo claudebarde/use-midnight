@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "A React hook to use Midnight in the browser",
   "main": "dist/index.js",
+  "type": "module",
   "module": "dist/index.js",
   "scripts": {
     "build": "tsc && cp ./src/midnight.module.css ./dist && cp ./src/lace.svg ./dist"
