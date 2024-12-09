@@ -16,7 +16,7 @@ npm install use-midnight
 import React from "react";
 
 import { useMidnight, MidnightButton } from "use-midnight";
-import type { Midnight } from "./midnight/useMidnight";
+import type { Midnight } from "use-midnight";
 
 function App() {
   const subscribe = (mn: Midnight) => {
