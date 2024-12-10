@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 import laceLogo from "./lace.svg";
 import styles from "./midnight.module.css";
 
-export type Midnight = {
+export type MidnightAPI = {
   apiVersion: string;
   isLaceInstalled: boolean;
   isEnabled: boolean;
@@ -20,10 +20,10 @@ export type Midnight = {
 
 export type MidnightButtonProps = {
   styles?: React.CSSProperties;
-  subscribe?: (mn: Midnight) => void;
+  subscribe?: (mn: MidnightAPI) => void;
 };
 
-export const useMidnight = async (): Promise<Midnight> => {
+export const useMidnight = async (): Promise<MidnightAPI> => {
   // checks if midnight.js has been injected into the browser window
   if (window.midnight) {
     const midnight = window.midnight;
@@ -66,9 +66,9 @@ export const useMidnight = async (): Promise<Midnight> => {
 };
 
 export const MidnightButton = (props: MidnightButtonProps): JSX.Element => {
-  let [midnight, setMidnight] = useState<undefined | Midnight>(undefined);
+  let [midnight, setMidnight] = useState<undefined | MidnightAPI>(undefined);
 
-  const connectWallet = async (midnight: Midnight | undefined) => {
+  const connectWallet = async (midnight: MidnightAPI | undefined) => {
     if (midnight && midnight.enable) {
       const api = await midnight.enable();
       const state = await api.state();
